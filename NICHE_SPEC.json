@@ -1,0 +1,45 @@
+{
+  "niche_name": "Гражданский контроль муниципалитета",
+  "niche_slug": "civicguard",
+  "description": "Система поддержки совета гражданских активистов для контроля за деятельностью муниципальной власти. Охватывает правозащиту, экологический контроль, ЖКХ, анализ бюджета и координацию команды.",
+  "target_users": "Председатель и члены совета гражданских активистов муниципалитета",
+  "channels": ["telegram", "web"],
+  "pain_points": [
+    "Сложно быстро найти нужную статью закона и правильно сформулировать жалобу",
+    "Нет единой базы знаний о нарушениях и ходе дел",
+    "Координация команды активистов требует много времени",
+    "Подготовка медийных материалов занимает часы",
+    "Трудно отследить все решения власти и не пропустить важное"
+  ],
+  "regulations": [
+    "59-ФЗ — обращения граждан (30 дней)",
+    "8-ФЗ — доступ к информации о деятельности госорганов",
+    "131-ФЗ — местное самоуправление",
+    "44-ФЗ — контрактная система",
+    "7-ФЗ — охрана окружающей среды"
+  ],
+  "emergency_keywords": ["угроза", "угрожают", "преследование", "давление", "арест", "задержали", "поджог"],
+  "routing_categories": ["legal", "eco", "housing", "budget", "foi", "coord", "media", "monitor"],
+  "department_agents": [
+    { "class_name": "LegalAgent",   "slug": "legal",   "display_name": "Правозащита",        "routing_category": "legal" },
+    { "class_name": "EcoAgent",     "slug": "eco",     "display_name": "Экологический контроль", "routing_category": "eco" },
+    { "class_name": "HousingAgent", "slug": "housing", "display_name": "ЖКХ-контроль",       "routing_category": "housing" },
+    { "class_name": "BudgetAgent",  "slug": "budget",  "display_name": "Бюджет и закупки",   "routing_category": "budget" },
+    { "class_name": "FOIAgent",     "slug": "foi",     "display_name": "Запросы по 8-ФЗ",   "routing_category": "foi" },
+    { "class_name": "CoordAgent",   "slug": "coord",   "display_name": "Координация команды","routing_category": "coord" },
+    { "class_name": "MediaAgent",   "slug": "media",   "display_name": "Медиа и коммуникации","routing_category": "media" },
+    { "class_name": "MonitorAgent", "slug": "monitor", "display_name": "Мониторинг решений", "routing_category": "monitor" }
+  ],
+  "worker_name": "civicguard-swarm",
+  "generated_at": "2026-03-14",
+  "based_on": "Умный Дмитров (smart-city-dmitrov), архитектура SwarmEngineer v1.0",
+  "roi": {
+    "before_response_time": "1–3 часа",
+    "after_response_time": "< 30 секунд",
+    "before_availability": "только рабочие часы активистов",
+    "after_availability": "24/7",
+    "before_cost": "волонтёрские часы",
+    "after_cost": "~0 (Workers AI бесплатен)",
+    "automation_rate": "75–85%"
+  }
+}

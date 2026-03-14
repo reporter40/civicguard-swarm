@@ -1,0 +1,38 @@
+{
+  "name": "civicguard-swarm",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-03-14",
+  "compatibility_flags": ["nodejs_compat"],
+  "durable_objects": {
+    "bindings": [
+      { "name": "MainOrchestrator", "class_name": "MainOrchestrator" },
+      { "name": "RouterAgent",      "class_name": "RouterAgent" },
+      { "name": "JudgeAgent",       "class_name": "JudgeAgent" },
+      { "name": "EmergencyAgent",   "class_name": "EmergencyAgent" },
+      { "name": "MemoryAgent",      "class_name": "MemoryAgent" },
+      { "name": "LegalAgent",       "class_name": "LegalAgent" },
+      { "name": "EcoAgent",         "class_name": "EcoAgent" },
+      { "name": "HousingAgent",     "class_name": "HousingAgent" },
+      { "name": "BudgetAgent",      "class_name": "BudgetAgent" },
+      { "name": "FOIAgent",         "class_name": "FOIAgent" },
+      { "name": "CoordAgent",       "class_name": "CoordAgent" },
+      { "name": "MediaAgent",       "class_name": "MediaAgent" },
+      { "name": "MonitorAgent",     "class_name": "MonitorAgent" }
+    ]
+  },
+  "migrations": [
+    {
+      "tag": "v1",
+      "new_sqlite_classes": [
+        "MainOrchestrator", "RouterAgent", "JudgeAgent",
+        "EmergencyAgent", "MemoryAgent",
+        "LegalAgent", "EcoAgent", "HousingAgent", "BudgetAgent",
+        "FOIAgent", "CoordAgent", "MediaAgent", "MonitorAgent"
+      ]
+    }
+  ],
+  "ai": { "binding": "AI" },
+  "vars": {
+    "ADMIN_TELEGRAM_ID": ""
+  }
+}
